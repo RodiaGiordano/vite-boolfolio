@@ -7,6 +7,7 @@ export default {
       title: "Hello world",
     };
   },
+  props: { project: Object },
 
   // components: {
   //   MyComponent,
@@ -15,7 +16,15 @@ export default {
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <div class="card h-100 m-2">
+    <div class="card-body">
+      {{ project.title }}
+      <hr />
+      {{ project.description }}
+      <hr />
+      {{ project.slug }}
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
