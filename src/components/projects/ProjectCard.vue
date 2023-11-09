@@ -1,30 +1,23 @@
 <script>
-// import MyComponent from "./components/MyComponent.vue";
-
 export default {
   data() {
-    return {
-      title: "Hello world",
-    };
+    return {};
   },
   props: { project: Object },
-
-  // components: {
-  //   MyComponent,
-  // },
 };
 </script>
 
 <template>
-  <div class="card h-100 m-2">
-    <div class="card-body">
-      {{ project.title }}
+  <div class="col">
+    <div class="card h-100 g-3 p-2">
+      <h2>{{ project.title }}</h2>
       <hr />
-      {{ project.description }}
-      <hr />
-      {{ project.slug }}
+      <div class="card-body">
+        <p class="fs-5">{{ project.description }}</p>
+      </div>
+      <button class="btn btn-primary w-25">Vedi</button>
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss"></style>
