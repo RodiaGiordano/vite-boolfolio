@@ -18,7 +18,8 @@ export default {
       <div class="card-body text-center">
         <p class="fs-5">{{ project.description }}</p>
 
-        <p
+        <router-link
+          :to="{ name: 'blog-type', params: { type_id: project.type_id } }"
           class="fs-5 text-light rounded-2"
           :style="{
             backgroundColor: project.type.color,
@@ -26,7 +27,7 @@ export default {
           v-if="project.type"
         >
           {{ project.type.label }}
-        </p>
+        </router-link>
 
         <p
           class="fs-5 text-light rounded-2"
